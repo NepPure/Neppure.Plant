@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2/win-x64",
-    "signature": "9d8619977e5b04e1f46ba454656cdf80e8c7fff1"
+    "signature": "d183475518fc5a967c38e6c7ad47f69735439dde"
   },
   "compilationOptions": {
     "defines": [
@@ -26,6 +26,7 @@
         "dependencies": {
           "Abp.AspNetCore": "4.6.0",
           "Abp.Castle.Log4Net": "4.6.0",
+          "Abp.RedisCache": "4.6.0",
           "Castle.Core": "4.3.1",
           "Castle.LoggingFacility.MsLogging": "3.1.0",
           "Microsoft.AspNetCore.Diagnostics": "2.2.0",
@@ -122,6 +123,15 @@
         },
         "compile": {
           "lib/netstandard2.0/Abp.EntityFrameworkCore.dll": {}
+        }
+      },
+      "Abp.RedisCache/4.6.0": {
+        "dependencies": {
+          "Abp": "4.6.0",
+          "StackExchange.Redis": "2.0.519"
+        },
+        "compile": {
+          "lib/netstandard2.0/Abp.RedisCache.dll": {}
         }
       },
       "Abp.Web.Common/4.6.0": {
@@ -1558,6 +1568,15 @@
           "lib/netstandard2.0/NUglify.dll": {}
         }
       },
+      "Pipelines.Sockets.Unofficial/1.0.7": {
+        "dependencies": {
+          "System.Buffers": "4.5.0",
+          "System.IO.Pipelines": "4.5.2"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/Pipelines.Sockets.Unofficial.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -1652,6 +1671,17 @@
       },
       "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {},
       "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {},
+      "StackExchange.Redis/2.0.519": {
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "1.0.7",
+          "System.Diagnostics.PerformanceCounter": "4.5.0",
+          "System.IO.Pipelines": "4.5.2",
+          "System.Threading.Channels": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/StackExchange.Redis.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.1"
@@ -1891,6 +1921,17 @@
           "System.Runtime": "4.3.1",
           "System.Runtime.Extensions": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0"
+        }
+      },
+      "System.Diagnostics.PerformanceCounter/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.2.1",
+          "Microsoft.Win32.Registry": "4.5.0",
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Diagnostics.PerformanceCounter.dll": {}
         }
       },
       "System.Diagnostics.Process/4.1.0": {
@@ -2583,6 +2624,11 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Threading.Channels/4.5.0": {
+        "compile": {
+          "lib/netcoreapp2.1/System.Threading.Channels.dll": {}
+        }
+      },
       "System.Threading.Overlapped/4.0.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.1",
@@ -2771,6 +2817,7 @@
         "dependencies": {
           "Abp.AspNetCore": "4.6.0",
           "Abp.Castle.Log4Net": "4.6.0",
+          "Abp.RedisCache": "4.6.0",
           "Castle.Core": "4.3.1",
           "Castle.LoggingFacility.MsLogging": "3.1.0",
           "Microsoft.AspNetCore.Diagnostics": "2.2.0",
@@ -2882,6 +2929,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Abp.EntityFrameworkCore.dll": {
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.6.0.0"
+          }
+        }
+      },
+      "Abp.RedisCache/4.6.0": {
+        "dependencies": {
+          "Abp": "4.6.0",
+          "StackExchange.Redis": "2.0.519"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Abp.RedisCache.dll": {
             "assemblyVersion": "4.6.0.0",
             "fileVersion": "4.6.0.0"
           }
@@ -4500,6 +4559,18 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/1.0.7": {
+        "dependencies": {
+          "System.Buffers": "4.5.0",
+          "System.IO.Pipelines": "4.5.2"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/Pipelines.Sockets.Unofficial.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.7.56431"
+          }
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -4591,6 +4662,20 @@
         }
       },
       "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {},
+      "StackExchange.Redis/2.0.519": {
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "1.0.7",
+          "System.Diagnostics.PerformanceCounter": "4.5.0",
+          "System.IO.Pipelines": "4.5.2",
+          "System.Threading.Channels": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.519.65453"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.1"
@@ -4851,6 +4936,20 @@
           "System.Runtime": "4.3.1",
           "System.Runtime.Extensions": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0"
+        }
+      },
+      "System.Diagnostics.PerformanceCounter/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.2.1",
+          "Microsoft.Win32.Registry": "4.5.0",
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "runtime": {
+          "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
         }
       },
       "System.Diagnostics.Process/4.1.0": {
@@ -5573,6 +5672,14 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Threading.Channels/4.5.0": {
+        "runtime": {
+          "lib/netcoreapp2.1/System.Threading.Channels.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
       "System.Threading.Overlapped/4.0.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.1",
@@ -5810,6 +5917,13 @@
       "sha512": "sha512-K2+kxMCQZn53vWScNEIbFjJL3YXwLiR6ANInw+bZEHQlXhvLfc5NlYJoallQiz+AA+asrnnjAlCL7GyNupN0QQ==",
       "path": "abp.entityframeworkcore/4.6.0",
       "hashPath": "abp.entityframeworkcore.4.6.0.nupkg.sha512"
+    },
+    "Abp.RedisCache/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KLUA7vA6mxmOhrAb9OKUJXJsvRE/6fjOUSJcl17g+3sYvA2fnemhU8r4mwuZzI8+ieeKo4ATwwUPDQawAR0Qnw==",
+      "path": "abp.rediscache/4.6.0",
+      "hashPath": "abp.rediscache.4.6.0.nupkg.sha512"
     },
     "Abp.Web.Common/4.6.0": {
       "type": "package",
@@ -6700,6 +6814,13 @@
       "path": "nuglify/1.5.12",
       "hashPath": "nuglify.1.5.12.nupkg.sha512"
     },
+    "Pipelines.Sockets.Unofficial/1.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n+YKaKVd9ZSa7uVeT0gyOT8eoeCWbiTdpVtnHkjthqmNopVPc4+efRQUReO+WH3WFyVKxgn5QS4BLi2Q+sioqA==",
+      "path": "pipelines.sockets.unofficial/1.0.7",
+      "hashPath": "pipelines.sockets.unofficial.1.0.7.nupkg.sha512"
+    },
     "Remotion.Linq/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -6853,6 +6974,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "StackExchange.Redis/2.0.519": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8+2UwZ5/xBzU0OxM/Rs273VXY9G1oFFM4WrHzF4BZQBbFqyJRM5Sj32zZSj9xJT9mPel2escaYEwKjfDUAgieQ==",
+      "path": "stackexchange.redis/2.0.519",
+      "hashPath": "stackexchange.redis.2.0.519.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",
@@ -7028,6 +7156,13 @@
       "sha512": "sha512-omCF64wzQ3Q2CeIqkD6lmmxeMZtGHUmzgFMPjfVaOsyqpR66p/JaZzManMw1s33osoAb5gqpncsjie67+yUPHQ==",
       "path": "system.diagnostics.fileversioninfo/4.3.0",
       "hashPath": "system.diagnostics.fileversioninfo.4.3.0.nupkg.sha512"
+    },
+    "System.Diagnostics.PerformanceCounter/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JUO5/moXgchWZBMBElgmPebZPKCgwW8kY3dFwVJavaNR2ftcc/YjXXGjOaCjly2KBXT7Ld5l/GTkMVzNv41yZA==",
+      "path": "system.diagnostics.performancecounter/4.5.0",
+      "hashPath": "system.diagnostics.performancecounter.4.5.0.nupkg.sha512"
     },
     "System.Diagnostics.Process/4.1.0": {
       "type": "package",
@@ -7518,6 +7653,13 @@
       "sha512": "sha512-HeR+nNUFW6ZpPCondhiR6InLL0zjjcbw1eJL2ZP9+PmhIL5yn0rCj2+EJb//GRHaDQ4KKr5CrH7oEbng/3mbug==",
       "path": "system.threading/4.3.0",
       "hashPath": "system.threading.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Channels/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MEH06N0rIGmRT4LOKQ2BmUO0IxfvmIY/PaouSq+DFQku72OL8cxfw8W99uGpTCFf2vx2QHLRSh374iSM3asdTA==",
+      "path": "system.threading.channels/4.5.0",
+      "hashPath": "system.threading.channels.4.5.0.nupkg.sha512"
     },
     "System.Threading.Overlapped/4.0.1": {
       "type": "package",
