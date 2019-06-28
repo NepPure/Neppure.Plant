@@ -38,6 +38,10 @@ namespace Neppure.Plant.Web.Startup
                 );
 
                 var pluginPath = Path.Combine(Directory.GetCurrentDirectory(), "Plugins");
+                if (!Directory.Exists(pluginPath))
+                {
+                    Directory.CreateDirectory(pluginPath);
+                }
 
                 options.PlugInSources.AddFolder(pluginPath);
             });
