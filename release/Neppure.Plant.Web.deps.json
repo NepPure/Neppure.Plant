@@ -40,6 +40,7 @@
           "Microsoft.NETCore.App": "2.2.5",
           "Microsoft.VisualStudio.Web.BrowserLink": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
+          "Neppure.DemoCache": "1.0.0",
           "Neppure.Plant.Application": "1.0.0",
           "Neppure.Plant.EntityFrameworkCore": "1.0.0",
           "System.Net.NameResolution": "4.3.0",
@@ -2779,6 +2780,15 @@
           "lib/netstandard2.0/TimeZoneConverter.dll": {}
         }
       },
+      "Neppure.DemoCache/1.0.0": {
+        "dependencies": {
+          "Abp.AspNetCore": "4.6.0",
+          "Neppure.Plant.Application": "1.0.0"
+        },
+        "compile": {
+          "Neppure.DemoCache.dll": {}
+        }
+      },
       "Neppure.Plant.Application/1.0.0": {
         "dependencies": {
           "Abp.AutoMapper": "4.6.0",
@@ -2831,6 +2841,7 @@
           "Microsoft.NETCore.App": "2.2.5",
           "Microsoft.VisualStudio.Web.BrowserLink": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
+          "Neppure.DemoCache": "1.0.0",
           "Neppure.Plant.Application": "1.0.0",
           "Neppure.Plant.EntityFrameworkCore": "1.0.0",
           "System.Net.NameResolution": "4.3.0",
@@ -5836,6 +5847,15 @@
           }
         }
       },
+      "Neppure.DemoCache/1.0.0": {
+        "dependencies": {
+          "Abp.AspNetCore": "4.6.0",
+          "Neppure.Plant.Application": "1.0.0"
+        },
+        "runtime": {
+          "Neppure.DemoCache.dll": {}
+        }
+      },
       "Neppure.Plant.Application/1.0.0": {
         "dependencies": {
           "Abp.AutoMapper": "4.6.0",
@@ -7765,6 +7785,11 @@
       "sha512": "sha512-HQU1SxEbRooKcg2LQhgSRAOD7ARmgQmPeJA9iMS09UiOdpRbCWgzA7IvUwetJKuUQPY1ZCCG21K8JavVPaXFOg==",
       "path": "timezoneconverter/3.1.0",
       "hashPath": "timezoneconverter.3.1.0.nupkg.sha512"
+    },
+    "Neppure.DemoCache/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Neppure.Plant.Application/1.0.0": {
       "type": "project",
