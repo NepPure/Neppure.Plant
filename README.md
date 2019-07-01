@@ -1,5 +1,5 @@
 # ASP.NET Core & EntityFramework Core Based Startup Template
-[![Build status](https://ci.neppure.vip/api/projects/status/8oyk00v0aakxq5ur?svg=true)](https://ci.neppure.vip/project/NepPure/neppure-plant)
+[![Build status](https://ci.neppure.vip/api/projects/status/8oyk00v0aakxq5ur/branch/master?svg=true)](https://ci.neppure.vip/project/NepPure/neppure-plant/branch/master)
 
 This template is a simple startup project to start with ABP
 using ASP.NET Core and EntityFramework Core.
