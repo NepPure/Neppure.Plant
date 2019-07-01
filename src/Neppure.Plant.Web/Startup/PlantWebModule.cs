@@ -17,6 +17,8 @@ namespace Neppure.Plant.Web.Startup
         typeof(AbpAspNetCoreModule))]
     public class PlantWebModule : AbpModule
     {
+        public bool IsUnitTest { get; set; }
+
         private readonly IConfigurationRoot _appConfiguration;
 
         public PlantWebModule(IHostingEnvironment env)
@@ -35,10 +37,13 @@ namespace Neppure.Plant.Web.Startup
                     typeof(PlantApplicationModule).GetAssembly()
                 );
 
-            Configuration.Caching.UseRedis(options =>
+            if (!IsUnitTest)
             {
-                options.ConnectionString = "127.0.0.1";
-            });
+                Configuration.Caching.UseRedis(options =>
+                {
+                    options.ConnectionString = "127.0.0.1";
+                });
+            }
         }
 
         public override void Initialize()

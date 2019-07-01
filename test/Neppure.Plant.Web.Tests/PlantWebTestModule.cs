@@ -10,6 +10,11 @@ namespace Neppure.Plant.Web.Tests
         )]
     public class PlantWebTestModule : AbpModule
     {
+        public PlantWebTestModule(PlantWebModule plantWebModule)
+        {
+            plantWebModule.IsUnitTest = true;
+        }
+
         public override void PreInitialize()
         {
             Configuration.UnitOfWork.IsTransactional = false; //EF Core InMemory DB does not support transactions.
