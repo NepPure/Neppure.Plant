@@ -7,16 +7,24 @@ using Castle.MicroKernel.Registration;
 using Castle.Windsor.MsDependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using Neppure.DemoCache;
 
 namespace Neppure.Plant.Tests
 {
     [DependsOn(
+        typeof(DemoCacheModule),
         typeof(PlantApplicationModule),
         typeof(PlantEntityFrameworkCoreModule),
         typeof(AbpTestBaseModule)
         )]
     public class PlantTestModule : AbpModule
     {
+        public PlantTestModule(DemoCacheModule demoCacheModule)
+        {
+            demoCacheModule.IsUnitTest = true;
+        }
+
         public override void PreInitialize()
         {
             Configuration.UnitOfWork.IsTransactional = false; //EF Core InMemory DB does not support transactions.
@@ -39,7 +47,7 @@ namespace Neppure.Plant.Tests
             );
 
             var builder = new DbContextOptionsBuilder<PlantDbContext>();
-            builder.UseInMemoryDatabase().UseInternalServiceProvider(serviceProvider);
+            builder.UseInMemoryDatabase(Guid.NewGuid().ToString()).UseInternalServiceProvider(serviceProvider);
 
             IocManager.IocContainer.Register(
                 Component

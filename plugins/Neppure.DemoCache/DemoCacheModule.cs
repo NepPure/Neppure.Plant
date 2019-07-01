@@ -10,6 +10,8 @@ namespace Neppure.DemoCache
         typeof(PlantApplicationModule))]
     public class DemoCacheModule : AbpModule
     {
+        public bool IsUnitTest { get; set; }
+
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(typeof(DemoCacheModule).GetAssembly());
@@ -17,10 +19,14 @@ namespace Neppure.DemoCache
 
         public override void PreInitialize()
         {
-            Configuration.Modules.AbpAspNetCore()
+            if (!IsUnitTest)
+            {
+                Configuration.Modules.AbpAspNetCore()
                 .CreateControllersForAppServices(
                     typeof(DemoCacheModule).GetAssembly()
                 , "DemoCache");
+            }
+
         }
     }
 }

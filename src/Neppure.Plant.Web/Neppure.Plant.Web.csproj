@@ -22,6 +22,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\plugins\Neppure.DemoCache\Neppure.DemoCache.csproj" />
     <ProjectReference Include="..\Neppure.Plant.Application\Neppure.Plant.Application.csproj" />
     <ProjectReference Include="..\Neppure.Plant.EntityFrameworkCore\Neppure.Plant.EntityFrameworkCore.csproj" />
   </ItemGroup>

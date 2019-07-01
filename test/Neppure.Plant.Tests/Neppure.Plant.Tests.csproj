@@ -13,6 +13,7 @@
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\plugins\Neppure.DemoCache\Neppure.DemoCache.csproj" />
     <ProjectReference Include="..\..\src\Neppure.Plant.Application\Neppure.Plant.Application.csproj" />
     <ProjectReference Include="..\..\src\Neppure.Plant.EntityFrameworkCore\Neppure.Plant.EntityFrameworkCore.csproj" />
   </ItemGroup>
